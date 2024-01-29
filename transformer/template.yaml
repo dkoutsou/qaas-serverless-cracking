@@ -1,0 +1,30 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  transformer
+
+  Sample SAM Template for transformer
+
+Globals:
+  Function:
+    Timeout: 600
+
+Resources:
+  AdvisorFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: advisor/
+      Handler: app.advisor
+      Runtime: python3.9
+      MemorySize: 2048
+      Policies:
+        - S3FullAccessPolicy:
+            BucketName: dimi-tpch-data
+
+Outputs:
+  AdvisorFunction:
+    Description: "Advisor Lambda Function ARN"
+    Value: !GetAtt AdvisorFunction.Arn
+  AdvisorFunctionIamRole:
+    Description: "Implicit IAM Role created for Advisor function"
+    Value: !GetAtt AdvisorFunctionRole.Arn

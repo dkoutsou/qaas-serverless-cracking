@@ -1,0 +1,34 @@
+---
+experiment_name: tpch-parquet-part-300
+output_bucket: dimi-tpch-data
+output_folder: athena-results/
+input_folder: tpch-sf-100-part-300-parquet/
+query_folder: queries
+schemas:
+  - name: tpch_sf_100_part_300_parquet
+    queries:
+     - 1.sql
+     - 2.sql
+     - 3.sql
+     - 4.sql
+     - 5.sql
+     - 6.sql
+     - 7.sql
+     - 8.sql
+     - 9.sql
+     - 10.sql
+     - 11.sql
+     - 12.sql
+     - 13.sql
+     - 14.sql
+     - 15.sql
+     - 16.sql
+     - 17.sql
+     - 18.sql
+     - 19.sql
+     - 20.sql
+     - 21.sql
+     - 22.sql
+schema_creation : False
+analyze : False
+

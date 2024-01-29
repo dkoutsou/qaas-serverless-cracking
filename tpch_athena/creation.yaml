@@ -1,0 +1,19 @@
+---
+ experiment_name: table-creation-part-300-parquet
+ output_bucket: dimi-tpch-data
+ input_bucket: dimi-tpch-data
+ output_folder: athena-results/
+ input_folder: tpch-sf-100-part-300-parquet/
+ query_folder: tables_parquet
+ schema_name: tpch_sf_100_part_300_parquet
+ schema_creation : True
+ clear_schema: True
+ queries:
+     - lineitem.sql
+     - customer.sql
+     - nation.sql
+     - orders.sql
+     - part.sql
+     - partsupp.sql
+     - region.sql
+     - supplier.sql

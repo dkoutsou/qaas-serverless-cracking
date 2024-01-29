@@ -1,0 +1,16 @@
+---
+ project_name: cloudml-301409
+ input_bucket: dimi-tpch-data
+ input_folder: tpch-sf-100-part-300-parquet
+ dataset_creation : True
+ dataset_name: test_dataset
+ format: parquet
+ table_names:
+     - lineitem
+     - customer
+     - nation
+     - orders
+     - part
+     - partsupp
+     - region
+     - supplier

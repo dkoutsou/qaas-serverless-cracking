@@ -1,0 +1,22 @@
+---
+ experiment_name: all-parquet-1-1-ratio
+ bucket: dimi-tpch-data
+ output_folder: transformed_data
+ log_group: /aws/lambda/advisor-AdvisorFunction-bPuJ0LZkOJM0
+ function_name: advisor-AdvisorFunction-bPuJ0LZkOJM0
+ function_cost: 0.0000000333
+ warmup: True
+ action: compress
+ sort_column: l_shipdate
+ num_batches: 15
+ file_format: csv
+ input_path: tpch-sf-100-part-300-csv
+ num_files: 100
+ num_processes: 20
+ tables:
+     - lineitem
+       # - customer
+       # - orders
+       # - part
+       # - partsupp
+       # - supplier
